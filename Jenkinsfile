@@ -1,13 +1,9 @@
 pipeline {
-	agent {
-		docker {
-			image 'python:3.10-alpine'
-		}
-	}
+	agent any
 	stages {
 		stage('Build') {
 			steps {
-				sh 'python3 ops.py'
+				echo 'Building ...'
 			}
 		}
 	}
